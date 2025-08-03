@@ -1,3 +1,4 @@
+//LAB4
 function sayHello() {
   console.log("wicked");
 }
