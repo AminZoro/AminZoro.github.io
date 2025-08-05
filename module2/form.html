@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .demo {
+        background-color: aqua;
+    }
+    div {
+        font-size: large;
+    }
+    div.divDemo#thisistheDiv {
+        background-color: blueviolet;
+    }
+    .parentDiv >.child {
+        background-color: brown;
+    }
+    a:hover {
+        background-color: aqua;
+    }
+</style>
+<body>
+    <form onsubmit="formSubmit(event)">
+        <div class="parentDiv" id="thisistheDiv"> 
+            <label> FirstName</label>
+            <input class="child" id="FirstName" type="text"/>
+        </div>
+          <div>
+            <label> LastName</label>
+            <input id="LastName" type="text"/>
+        </div>
+        <button type="submit"> Submit
+        </button>
+            
+    </form>
+</body>
+<script>
+    function formSubmit(event){
+event.preventDefault();
+      
+        const FirstName= document.getElementById("FirstName").value;
+        const LastName= document.getElementById("LastName").value;
+        
+        sayHi(FirstName, LastName);
+    }
+    function sayHi(fn, ln){
+        console.log(`Hi, ${fn} ${ln}`);
+    }
+</script>
+</html>
